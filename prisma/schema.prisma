@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Property {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  location    String
+  price       String
+  size        String
+  openArea    String
+  plantedArea String?
+  area_lavoura  String?
+  imageUrl    String
+  imageUrls   String?
+  isVerified  Boolean  @default(false)
+  distance    String?
+  soilType    String?
+  features    String?
+  cond_pag     String?
+  status      String?
+  camp_safra  Boolean @default(false)
+  camp_videos   String?
+}
+
