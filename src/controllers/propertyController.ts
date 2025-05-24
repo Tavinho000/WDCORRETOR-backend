@@ -98,13 +98,13 @@ export const createProperty = async (req: Request, res: Response): Promise<void>
         area_lavoura,
         imageUrl,
         imageUrls,
-        isVerified: isVerified ?? false,
+        isVerified: (isVerified !== undefined && isVerified !== null) ? isVerified : false,
         distance,
         soilType,
         features,
         cond_pag,
         status,
-        camp_safra: camp_safra ?? false,
+        camp_safra: (camp_safra !== undefined && camp_safra !== null) ? camp_safra : false,
         camp_videos
       }
     });
