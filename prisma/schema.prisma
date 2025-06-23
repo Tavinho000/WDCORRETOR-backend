@@ -13,10 +13,10 @@ model Property {
   description String?
   location    String
   price       Decimal
-  size        String
-  openArea    String
-  plantedArea String?
-  area_lavoura  String?
+  size        Float 
+  openArea    Float 
+  plantedArea Float?
+  area_lavoura  Float?
   imageUrl    String
   imageUrls   String?
   isVerified  Boolean  @default(false)
