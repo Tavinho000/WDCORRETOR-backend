@@ -8,24 +8,28 @@ datasource db {
 }
 
 model Property {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   title       String
   description String?
   location    String
-  price       Decimal
-  size        Float 
-  openArea    Float 
+  price       Decimal  
+
+  size        Float
+  openArea    Float
   plantedArea Float?
   area_lavoura  Float?
+
   imageUrl    String
-  imageUrls   String?
-  isVerified  Boolean  @default(false)
+
+  imageUrls   String[]
+  features    String[]
+  camp_videos String[]
+
+  isVerified  Boolean   @default(false)
   distance    String?
   soilType    String?
-  features    String?
-  cond_pag     String?
+  cond_pag      String?
   status      String?
-  camp_safra  Boolean @default(false)
-  camp_videos   String?
+  camp_safra  Boolean   @default(false)
 }
 
