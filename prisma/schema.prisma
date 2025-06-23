@@ -12,7 +12,7 @@ model Property {
   title       String
   description String?
   location    String
-  price       String
+  price       Decimal
   size        String
   openArea    String
   plantedArea String?
